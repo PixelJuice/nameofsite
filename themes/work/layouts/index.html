@@ -1,0 +1,8 @@
+{{ partial "head" . }} <!-- include a partial named head -->
+{{ range (.Paginator 10).Pages }}
+  <h1>
+    <a href="{{ .RelPermalink }}">
+      {{ .Title }}
+    </a>
+  </h1>
+{{ end }}
